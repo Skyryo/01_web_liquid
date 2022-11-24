@@ -7,14 +7,24 @@ img {
 }
 /*------------
 ヘッダー
-・固定ヘッダーと高さの固定
-・width max-widthを適用させない
 ------------*/
+/*ロゴの横 */
+a.logo {
+ padding-left: 24px; 
+}
 .header__wrap {
   position: relative;
 }
 .hamburger2 {
   position: absolute;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
