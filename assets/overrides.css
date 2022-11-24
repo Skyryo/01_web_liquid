@@ -1,1 +1,48 @@
 /* Custom Styles */
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+/*------------
+ヘッダー
+・固定ヘッダーと高さの固定
+・width max-widthを適用させない
+------------*/
+.drawer-container {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  z-index: 999;
+  width: 16.66666%;
+  background-color: white;
+  border: 1px #f3f3f3 solid;
+  height: calc(100vh - 80px);
+  overflow: auto;
+  transition: all .5s;
+}
+#login-button {
+  display: block;
+  background-color:rgb(255, 196, 0) ;
+  color: rgb(1, 1, 129);
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 4px 0;
+}
+
+.nav-menu-title {
+  font-size: 18px;
+  color: rgba(90, 90, 90);
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dddddd;
+  cursor: pointer;
+}
+.nav-side-menu-item {
+  padding: .8rem 1rem;
+  cursor: pointer;
+}
+.close {
+  left:-120%;
+}
