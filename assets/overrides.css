@@ -10,6 +10,9 @@ img {
 ・固定ヘッダーと高さの固定
 ・width max-widthを適用させない
 ------------*/
+.hamburger {
+  position: absolute;
+}
 .drawer-container {
   position: fixed;
   top: 68px;

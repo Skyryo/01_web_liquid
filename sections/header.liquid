@@ -125,8 +125,8 @@
   </div>
   {% if hello_bar_count != section.blocks.size and section.blocks.size != 0 %}
     <div class="header__wrap">
-      <div class="hamburger" kjb-settings-id="{{ 'hamburger_color' | settings_id: section: section }}">
-        <div class="hamburger__slices header__switch-content">
+      <div id="ham-menu" class="hamburger" kjb-settings-id="{{ 'hamburger_color' | settings_id: section: section }}">
+        <div class="hamburger__slices">
           <div class="hamburger__slice hamburger--slice-1"></div>
           <div class="hamburger__slice hamburger--slice-2"></div>
           <div class="hamburger__slice hamburger--slice-3"></div>
