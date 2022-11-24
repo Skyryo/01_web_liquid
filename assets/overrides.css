@@ -13,11 +13,12 @@ img {
 .header__wrap {
   position: relative;
 }
-.hamburger {
+.hamburger2 {
   position: absolute;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  z-index: 99999;
 }
 /*高さを一定にするため*/
 .header__content {
