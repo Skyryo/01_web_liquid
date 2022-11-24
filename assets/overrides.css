@@ -10,9 +10,20 @@ img {
 ・固定ヘッダーと高さの固定
 ・width max-widthを適用させない
 ------------*/
+.header__wrap {
+  position: relative;
+}
 .hamburger {
   position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
 }
+/*高さを一定にするため*/
+.header__content {
+  padding: 12px 0!important; 
+}
+
 .drawer-container {
   position: fixed;
   top: 68px;
