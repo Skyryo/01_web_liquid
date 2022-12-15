@@ -3,9 +3,17 @@
 /*------
 カスタムスクリプト 
 ------*/
-const sideMenu = document.getElementById('ham-menu');
+//クリックでdrawerメニューの開閉
+const hamMenu = document.getElementById('ham-menu');
 const target = document.getElementById('drawer-container');
-
-sideMenu.addEventListener('click', function(){
+hamMenu.addEventListener('click', function(){  
   target.classList.toggle('close');
 });
+
+function switchByWidth() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    target.classList.add('close')
+  }
+}
+window.onload = switchByWidth();
+window.onresize = switchByWidth();

@@ -4,11 +4,14 @@
   /* Default Header Styles */
   .header {
     {% if section.settings.position == "overlay" %}
-      background-color: {{ section.settings.background_color | default: "transparent" }};
+      background-color: {{ section.settings.background_color | default: "transparent" }}
+      ;
     {% else %}
-      background-color: {{ section.settings.background_color | default: "#FFFFFF" }};
+      background-color: {{ section.settings.background_color | default: "#FFFFFF" }}
+      ;
     {% endif %}
-    font-size: {{ section.settings.font_size_desktop }};
+    font-size: {{ section.settings.font_size_desktop }}
+    ;
   }
   .header a,
   .header a.link-list__link,
@@ -17,18 +20,22 @@
   .header .user__login a,
   .header .dropdown__item a,
   .header .dropdown__trigger:hover {
-    color: {{ section.settings.text_color | default: dark_text }};
+    color: {{ section.settings.text_color | default: dark_text }}
+    ;
   }
   .header .dropdown__trigger {
-    color: {{ section.settings.text_color | default: dark_text }} !important;
+    color: {{ section.settings.text_color | default: dark_text }}
+     !important;
   }
   /* Mobile Header Styles */
   @media(max-width: 767px) {
     .header {
       {% if section.settings.mobile_header_background_color != blank %}
-        background-color: {{ section.settings.mobile_header_background_color }};
+        background-color: {{ section.settings.mobile_header_background_color }}
+        ;
       {% endif %}
-      font-size: {{ section.settings.font_size_mobile }};
+      font-size: {{ section.settings.font_size_mobile }}
+      ;
     }
     {% if section.settings.mobile_header_text_color != blank %}
       .header a,
@@ -38,24 +45,29 @@
       .header .user__login a,
       .header a.link-list__link:hover,
       .header .dropdown__trigger:hover {
-        color: {{ section.settings.mobile_header_text_color }};
+        color: {{ section.settings.mobile_header_text_color }}
+        ;
       }
       .header .dropdown__trigger {
-        color: {{ section.settings.mobile_header_text_color }} !important;
+        color: {{ section.settings.mobile_header_text_color }}
+         !important;
       }
     {% endif %}
     .header .hamburger__slices .hamburger__slice {
       {% if section.settings.hamburger_color != blank %}
-        background-color: {{ section.settings.hamburger_color  }};
+        background-color: {{ section.settings.hamburger_color  }}
+        ;
       {% else %}
-        background-color: {{ section.settings.mobile_header_text_color | default: section.settings.text_color }};
+        background-color: {{ section.settings.mobile_header_text_color | default: section.settings.text_color }}
+        ;
       {% endif %}
     }
     {% if section.settings.mobile_menu_text_alignment != blank %}
       .header a.link-list__link,
       .dropdown__item a,
       .header__content--mobile {
-        text-align: {{ section.settings.mobile_menu_text_alignment }};
+        text-align: {{ section.settings.mobile_menu_text_alignment }}
+        ;
       }
     {% endif %}
     .header--overlay .header__content--mobile {
@@ -65,12 +77,15 @@
   /* Sticky Styles */
   {% if section.settings.sticky == true %}
     .header.header--fixed {
-      background-color: {{ section.settings.background_color }};
+      background-color: {{ section.settings.background_color }}
+      ;
       {% if section.settings.mobile_header_background_color %}
-        background-color: {{ section.settings.mobile_header_background_color }};
+        background-color: {{ section.settings.mobile_header_background_color }}
+        ;
       {% endif %}
       {% if section.settings.sticky_background_color %}
-        background-color: {{ section.settings.sticky_background_color }};
+        background-color: {{ section.settings.sticky_background_color }}
+        ;
       {% endif %}
     }
     {% if section.settings.sticky_text_color != blank %}
@@ -81,19 +96,23 @@
       .header.header--fixed .dropdown__trigger:hover,
       .header.header--fixed .dropdown__item a,
       .header.header--fixed .user__login a {
-        color: {{ section.settings.sticky_text_color }};
+        color: {{ section.settings.sticky_text_color }}
+        ;
       }
     {% endif %}
     {% if section.settings.sticky_text_color != blank %}
       .header.header--fixed .dropdown__trigger {
-        color: {{ section.settings.sticky_text_color }} !important;
+        color: {{ section.settings.sticky_text_color }}
+         !important;
       }
     {% endif %}
     .header.header--fixed .hamburger__slice {
       {% if section.settings.sticky_hamburger_color != blank %}
-        background-color: {{ section.settings.sticky_hamburger_color }};
+        background-color: {{ section.settings.sticky_hamburger_color }}
+        ;
       {% else %}
-        background-color: {{ section.settings.sticky_text_color }};
+        background-color: {{ section.settings.sticky_text_color }}
+        ;
       {% endif %}
     }
   {% endif %}
@@ -119,13 +138,16 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when "hello_bar" %}
-          {% include "header_block" type: "header_block_hello_bar" class: "header__block--hello-bar header__block--show" %}
+        {% include "header_block" type: "header_block_hello_bar" class: "header__block--hello-bar header__block--show" %}
       {% endcase %}
     {% endfor %}
   </div>
   {% if hello_bar_count != section.blocks.size and section.blocks.size != 0 %}
     <div class="header__wrap">
-      <div id="ham-menu" class="hamburger2" kjb-settings-id="{{ 'hamburger_color' | settings_id: section: section }}">
+      <div
+        id="ham-menu"
+        class="hamburger2"
+        kjb-settings-id="{{ 'hamburger_color' | settings_id: section: section }}">
         <div class="hamburger__slices">
           <div class="hamburger__slice hamburger--slice-1"></div>
           <div class="hamburger__slice hamburger--slice-2"></div>
@@ -138,17 +160,17 @@
           {% for block in section.blocks %}
             {% case block.type %}
               {% when "logo" %}
-                {% include "header_block" type: "shared_block_logo" class: "header__block--logo header__block--show header__switch-content" %}
+              {% include "header_block" type: "shared_block_logo" class: "header__block--logo header__block--show header__switch-content" %}
               {% when "menu" %}
-                {% include "header_block" type: "shared_block_menu" class: "header__switch-content header__block--menu" %}
+              {% include "header_block" type: "shared_block_menu" class: "header__switch-content header__block--menu" %}
               {% when "cta" %}
-                {% include "header_block" type: "block_cta" class: "header__block--cta" %}
+              {% include "header_block" type: "block_cta" class: "header__block--cta" %}
               {% when "user" %}
-                {% include "header_block" type: "header_block_user" class: "header__switch-content header__block--user" %}
+              {% include "header_block" type: "header_block_user" class: "header__switch-content header__block--user" %}
               {% when "dropdown" %}
-                {% include "header_block" type: "header_block_dropdown" class: "header__switch-content header__block--dropdown" %}
+              {% include "header_block" type: "header_block_dropdown" class: "header__switch-content header__block--dropdown" %}
               {% when "social_icons" %}
-                {% include "header_block" type: "block_social_icons" class: "header__switch-content header__block--social-icons" %}
+              {% include "header_block" type: "block_social_icons" class: "header__switch-content header__block--social-icons" %}
             {% endcase %}
           {% endfor %}
           {% if show_hamburger %}

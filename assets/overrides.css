@@ -9,7 +9,7 @@ img {
 ヘッダー
 ------------*/
 /*ロゴの横 */
-a.logo {
+.logo {
  padding-left: 24px; 
 }
 .header__wrap {
@@ -17,7 +17,7 @@ a.logo {
 }
 .hamburger2 {
   position: absolute;
-  width: 30px;
+    width: 30px;
   height: 24px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -34,7 +34,9 @@ a.logo {
 .header__content {
   padding: 12px 0!important; 
 }
-
+/*------------
+drawerメニュー
+------------*/
 .drawer-container {
   position: fixed;
   top: 68px;
@@ -49,9 +51,10 @@ a.logo {
 }
 #login-button {
   display: block;
-  background-color:rgb(255, 196, 0) ;
-  color: rgb(1, 1, 129);
+  background-color: #335E40;
+  color: white;
   text-align: center;
+  border: none;
   width: 80%;
   margin: 1rem auto;
   padding: 4px 0;
@@ -65,9 +68,15 @@ a.logo {
   cursor: pointer;
 }
 .nav-side-menu-item {
-  padding: .8rem 1rem;
+  padding: .2rem 1rem;
   cursor: pointer;
 }
 .close {
   left:-120%;
 }
+@media screen and (max-width:768px) {
+  .drawer-container {
+    width: 70%;
+  }
+}
+
