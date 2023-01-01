@@ -1,4 +1,16 @@
 /* Custom Styles */
+#main-padding {
+  padding-left: 16.666%;
+}
+.toggle-padding {
+  padding-left: 0!important;
+}
+@media screen and (max-width:768px) {
+  #main-padding {
+    padding-left: 0;
+  }
+}
+
 li {
   list-style: none;
 }

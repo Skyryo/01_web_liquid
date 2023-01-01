@@ -173,21 +173,9 @@
               {% include "header_block" type: "block_social_icons" class: "header__switch-content header__block--social-icons" %}
             {% endcase %}
           {% endfor %}
-          {% if show_hamburger %}
-            <!--div class="hamburger hidden--desktop" kjb-settings-id="{{ 'hamburger_color' | settings_id: section: section }}">
-            <div class="hamburger__slices">
-            <div class="hamburger__slice hamburger--slice-1"></div>
-            <div class="hamburger__slice hamburger--slice-2"></div>
-            <div class="hamburger__slice hamburger--slice-3"></div>
-            <div class="hamburger__slice hamburger--slice-4"></div>
-            </div>
-            </div-->
-          {% endif %}
+          {% if show_hamburger %}{% endif %}
         </div>
       </div>
-      <!--div class="header__content header__content--mobile">
-      <div class="header__switch-content header__spacer"></div>
-      </div -->
     </div>
   {% endif %}
   <div id="drawer-container" class="drawer-container">
@@ -196,45 +184,50 @@
     </a>
     <nav class="nav-side-menu">
       <h4 class="nav-menu-title">動画コンテンツ</h4>
-      <!-- <li class="nav-side-menu-item">ジャンル一覧 </li>
-      <li class="nav-side-menu-item">国際テロリズム</li>
-      <li class="nav-side-menu-item">中東の国際政治</li>
-      <li class="nav-side-menu-item">技術と安全保障</li>
-      <li class="nav-side-menu-item">地政学</li>
-      <li class="nav-side-menu-item">海洋安全保障</li>
-      <li class="nav-side-menu-item">朝鮮半島の安全保障</li>
-      <li class="nav-side-menu-item">経済安全保障</li>
-      <li class="nav-side-menu-item">エネルギー地政学</li>
-      <li class="nav-side-menu-item">アメリカ政治</li>
-      <li class="nav-side-menu-item">日本の安全保障</li>
-      <li class="nav-side-menu-item">米中覇権闘争</li>
-      <li class="nav-side-menu-item">現代ロシア研究</li>
-      -->
-      <li class="nav-side-menu-item">学習ジャンル一覧</li>
+      <li class="nav-side-menu-item">
+        <a href="/videos"></a>学習ジャンル一覧</li>
       <h4 class="nav-menu-title">教えて〇〇先生！</h4>
       <li class="nav-side-menu-item">
-        <a href="#">教えて〇〇先生について</a>
+        <a href="/teach_me">教えて〇〇先生について</a>
       </li>
       <li class="nav-side-menu-item">
-        <a href="#">実施スケジュール</a>
+        <a href="/teach_me">実施スケジュール</a>
       </li>
       <h4 class="nav-menu-title">クラブ活動</h4>
       <li class="nav-side-menu-item">
-        <a href="/club">クラブ活動について</a>
+        <a href="/clubs">クラブ活動について</a>
       </li>
-      <li class="nav-side-menu-item">クラブ活動一覧</li>
-      <li class="nav-side-menu-item">最近の活動ブログ</li>
+      <li class="nav-side-menu-item">
+        <a href="/clubs">クラブ活動一覧</a>
+      </li>
+      <li class="nav-side-menu-item">
+        <a href="/clubs">最近の活動ブログ</a>
+      </li>
 
       <h4 class="nav-menu-title">ヘルプ</h4>
-      <li class="nav-side-menu-item">OASISについて
+      <!--li class="nav-side-menu-item">OASISについて
+      </li-->
+      <li class="nav-side-menu-item">
+        <a href="/#section-1663916589050">料金</a>
       </li>
-      <li class="nav-side-menu-item">料金</li>
-      <li class="nav-side-menu-item">お問い合わせ</li>
-      <li class="nav-side-menu-item">よくある質問</li>
-      <li class="nav-side-menu-item">会社情報</li>
-      <li class="nav-side-menu-item">利用規約</li>
-      <li class="nav-side-menu-item">プライバシーポリシー</li>
-      <li class="nav-side-menu-item">特定商取引法に基づく記述</li>
+      <li class="nav-side-menu-item">
+        <a href="/form">お問い合わせ</a>
+      </li>
+      <li class="nav-side-menu-item">
+        <a href="/section-1655128521842">よくある質問</a>
+      </li>
+      <li class="nav-side-menu-item">
+        <a href="/#section-1663916589050">会社情報</a>
+      </li>
+      <li class="nav-side-menu-item">
+        <a href="/doc_1">利用規約</a>
+      </li>
+      <li class="nav-side-menu-item">
+        <a href="/doc_2">プライバシーポリシー</a>
+      </li>
+      <li class="nav-side-menu-item">
+        <a href="/doc_3">特定商取引法に基づく記述</a>
+      </li>
     </nav>
   </div>
 </header>

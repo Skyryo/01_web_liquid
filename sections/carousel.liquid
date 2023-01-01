@@ -72,13 +72,12 @@
     <div class="section__overlay"></div>
     <div class="container {% if section.settings.full_width == true and section.blocks.size > 1 %}container--full{% endif %}">
       {% if section.blocks.size > 1 %}
-        <div
+        <div id="slider-id"
         data-slick='{
           "slide": ".slide",
           "rows": 0,
           "centerMode": true,
           "slidesToScroll": 1,
-          "slidesToShow": 3,
           "adaptiveHeight": {{ section.settings.adaptive_height }},
           "autoplay": {{section.settings.autoplay}},
           "fade": {{section.settings.fade | default: false }},
